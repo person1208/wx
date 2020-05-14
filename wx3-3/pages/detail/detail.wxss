@@ -1,0 +1,27 @@
+/* pages/detail/detail.wxss */
+.top{
+    height:60px;
+    border-bottom: 1px solid #000;
+    text-align: right;
+    padding-right:10px;
+}
+.pic{
+    width: 160px;
+    height: 100px;
+}
+.pic image{
+    width: 160px;
+    height: 100px;
+}
+.car{
+    border:1px solid #ccc;
+    padding:10px;
+    display: flex;
+    margin-top: 5px;
+}
+.car .word{
+    flex:1;
+    margin-left: 10px;
+    font-size:14px;
+
+}

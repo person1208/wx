@@ -1,0 +1,7 @@
+<!--components/comp/comp.wxml-->
+<view>
+    我是组件{{a}}
+    <view>b:{{b}}</view>
+    <button bindtap="addA">a+1</button>
+    <button bindtap="addB">b+1</button>
+</view>

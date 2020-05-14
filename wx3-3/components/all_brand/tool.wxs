@@ -1,0 +1,10 @@
+function getkeys(obj){
+    // var arr=[];
+    // for(var k in obj){
+    //     arr.push(k)
+    // }
+    // return arr;
+}
+module.exports={
+    getkeys:getkeys
+}

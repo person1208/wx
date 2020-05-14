@@ -1,0 +1,14 @@
+<view>
+    <template name="temp1">
+        <view>我是模板一</view>
+        <view>a:{{a}}</view>
+        <view>b:{{b}}</view>
+        <view>c:{{c}}</view>
+        <button bindtap="add">a+1</button>
+    </template>
+
+    <template is="temp1" data="{{...mydata,c:34}}"></template>
+    <template is="temp1" data="{{...mydata,c:434}}"></template>
+    <template is="temp1" data="{{...mydata,c:4}}"></template>
+    <template is="temp1" data="{{...mydata,c:34}}"></template>
+</view>

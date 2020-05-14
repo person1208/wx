@@ -1,0 +1,22 @@
+Page({
+  data:{
+    r:100,
+    g:100,
+    b:100
+  },
+  changeR(e){
+    this.setData({
+      r:e.detail.value
+    })    
+  },
+  changeG(e){
+    this.setData({
+      g:e.detail.value
+    })    
+  },
+  changeB(e){
+    this.setData({
+      b:e.detail.value
+    })    
+  }
+})

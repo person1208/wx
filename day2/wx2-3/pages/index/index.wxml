@@ -1,0 +1,5 @@
+<view>
+    <my-test mystr='你好呀'></my-test>
+    <my-test mystr='爱你哟'></my-test>
+    <my-test mystr='么么哒'></my-test>
+</view>

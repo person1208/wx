@@ -1,0 +1,22 @@
+.top{
+  height:50px;
+  border-bottom:1px solid #ccc;
+}
+.box{
+  padding: 10px;
+  display: flex;
+}
+.box .pic{
+  width: 160px;
+  height: 100px;
+}
+.box .pic image{
+  width: 160px;
+  height: 100px;
+}
+.box .word{
+  padding-left: 10px;
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}

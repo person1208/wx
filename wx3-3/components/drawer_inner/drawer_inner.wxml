@@ -1,0 +1,27 @@
+<!--components/drawer_inner/drawer.wxml-->
+<view>   
+   <view wx:if="{{nowshow=='main'}}">
+        <scroll-view scroll-y="true" style="height:{{windowHeight-51}}px">
+            <view class="sx_grid">
+                <view class="title">品牌</view>
+                <view class="content">
+                    <view class="btn">宝马</view>
+                    <view class="btn">奔驰</view>
+                    <view class="btn">奥迪</view>
+                    <view class="btn">本田</view>
+                    <view class="btn">丰田</view>
+                    <view class="btn">标致</view>
+                    <view class="btn">日产</view>
+                    <view class="btn">五菱</view>
+                    <view class="btn all" bindtap="showallbrand">查看全部</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="bottom_btn">
+            <view class="btn1">取消</view>
+            <view class="btn2">确定</view>
+        </view>
+    </view>
+
+    <all_brand wx:if="{{nowshow=='allbrand'}}"></all_brand>
+</view>

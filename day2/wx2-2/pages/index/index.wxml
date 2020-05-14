@@ -1,0 +1,8 @@
+<view>
+   <import src='./temp.wxml' />
+
+    <template is="temp1" data="{{...mydata,c:34}}" />
+    <template is="temp1" data="{{...mydata,c:434}}"></template>
+    <template is="temp1" data="{{...mydata,c:4}}"></template>
+    <template is="temp1" data="{{...mydata,c:34}}"></template>
+</view>

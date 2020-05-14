@@ -1,0 +1,7 @@
+<view>
+<wxs src='./tool.wxs' module='tool'></wxs>
+    {{tool.mianji(a)}}
+    <button bindtap="add">按我加一</button>
+    {{a}}
+    {{tool.zhouchang(10)}}
+</view>

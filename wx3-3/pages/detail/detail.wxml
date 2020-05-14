@@ -1,0 +1,35 @@
+<view>
+    <view class="top">
+        <van-button type="info" bind:click="showPopup">筛选</van-button>
+
+        <van-popup show="{{ show }}" bind:close="onClose"  position="right">
+            <view style="height:{{windowHeight}}px;width:240px">
+                <drawer_inner></drawer_inner>
+            </view>
+        </van-popup>
+
+    </view>
+
+    <template name="car">
+        <view class="car">
+            <view class="pic">
+                <image src="http://aiqianduan.com:7897/images/carimages_small/{{item.id}}/view/{{item.img}}"></image>
+            </view>
+            <view class="word">
+                <view>【id】{{item.id}}</view>
+                <view>【品牌】{{item.brand}}</view>
+                <view>【价格】{{item.price}}</view>
+                <view>【颜色】{{item.color}}</view>
+                <view>【排放】{{item.exhaust}}</view>
+            </view>
+        </view>
+    </template>
+
+    
+    <scroll-view bindscrolltolower='lowerH' lower-threshold='200' scroll-y='true' style="height:{{windowHeight-61}}px">
+        <view>
+            <template wx:for="{{res}}" wx:key='id' is="car" data="{{item}}" />
+        </view>
+        <view style="text-align:center;">到底了，没有更多了</view>
+    </scroll-view>
+</view>

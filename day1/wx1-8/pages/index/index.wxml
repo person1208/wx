@@ -1,0 +1,15 @@
+<view>
+   <radio-group bindchange='check'>
+      <radio value='射手' checked="{{now=='射手'}}">射手</radio>
+      <radio value='法师' checked="{{now=='法师'}}">法师</radio>
+      <radio value='辅助' checked="{{now=='辅助'}}">辅助</radio>
+      <radio value='坦克' checked="{{now=='坦克'}}">坦克</radio>
+      <radio value='战士' checked="{{now=='战士'}}">战士</radio>
+      <radio value='刺客' checked="{{now=='刺客'}}">刺客</radio>
+   </radio-group>
+  <view class="y" wx:for='{{arr}}' wx:key='index'>
+     <image src='http://www.aiqianduan.com:56506/images/wzry/{{item.pic}}.jpg'></image>
+    {{item.cname}}
+    <view class="mask" wx:if='{{now!=item.hero_type}}'></view>
+  </view>
+</view>

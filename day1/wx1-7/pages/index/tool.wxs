@@ -1,0 +1,7 @@
+function isred(arr,n){
+    return arr.indexOf(n)!=-1
+}
+
+module.exports={
+    isred:isred
+}

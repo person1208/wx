@@ -1,0 +1,6 @@
+<view>
+    <my-comp b="{{b}}" bindselfE='aB'></my-comp>
+    <my-comp b="{{b}}" bindselfE='aB'></my-comp>
+    <my-comp b="{{b}}" bindselfE='aB'></my-comp>
+    <!-- <button bindtap="addB">b+1</button> -->
+</view>

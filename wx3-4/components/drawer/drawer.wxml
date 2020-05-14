@@ -1,0 +1,23 @@
+<!--components/drawer/drawer.wxml-->
+<view>
+   <view wx:if="{{nowshow=='main'}}">
+         <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+        <view class="sx_grid">
+            <view class="title">
+                <view style="float:left;">品牌</view>
+                <view  style="float:right;">当前：{{brand}}</view>
+            </view>
+            
+            <view class="content">
+                <view wx:for='{{arr}}' wx:key='index' class="btn {{item==brand?'cur':''}}" bindtap="pin" data-p='{{item}}'>{{item}}</view>
+                <view class="btn all" bindtap="showall">全部</view>
+            </view>
+        </view>
+        </scroll-view>
+        <view class="bottom_btn">
+            <view class="btn1">取消</view>
+            <view class="btn2" bindtap="drawerok">确定</view>
+        </view>
+   </view>
+   <my-allbrand bindok='okHan' wx:if="{{nowshow=='allbrand'}}"></my-allbrand>
+</view>

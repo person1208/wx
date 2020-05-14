@@ -1,0 +1,9 @@
+<view>
+    <view class="row">
+        <input class="kuang" value="{{content}}" bindinput="changev"></input>      
+        <button bindtap="insert">add</button>
+    </view>
+      <view class="t" wx:for='{{arr}}' wx:key="index">
+          {{index+1}}-{{item}}
+      </view>    
+</view>

@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+}
+.container .sidebar{
+    width:80px;
+    background-color: #eee;
+}
+.container .main{
+    flex:1;
+    padding-left:10px;
+    background-color: blanchedalmond;
+}
+.pro{
+    border-bottom:1px solid #f00;
+}
+.pro .biaoti{
+    font-size:16px;
+    color:#f38;
+    height:40px;
+    line-height:40px;
+    font-weight: bold;
+    text-align: center;
+}
+.pro .box{
+    width: 95%;
+    display: flex;
+    border:1px solid #f0f;
+    margin:0 auto 10px;
+    height:110px;
+    padding:5px;
+    box-sizing: border-box;
+}
+.pro .box image{
+    width: 100px;
+    height: 100px;
+}
+.pro .box .wordbox{
+   flex:1;
+   text-align: right;
+   font-size: 14px;
+    padding-right:10px;
+}
+
+.container .sidebar .lm{
+    height:30px;
+    line-height:30px;
+    font-size: 14px;
+    text-align: center;
+}
+.container .sidebar .lm.cur{
+    background-color: #fff;
+    border-left:3px solid #f00;
+}

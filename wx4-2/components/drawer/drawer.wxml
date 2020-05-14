@@ -1,0 +1,24 @@
+<view>
+    <view wx:if="{{nowshow=='main'}}">
+        <view class="contianer">
+            <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+                <view>
+                    <view class="title">
+                        <view class="pinpai">品牌</view>
+                        <view class="now">当前：{{nowchoose}}</view>
+                    </view>
+                    <view class="content">
+                        <view class="gird {{item==nowchoose?'cur':''}}" wx:for='{{arr}}' wx:key='index' bindtap="pinpaiH" data-brand='{{item}}'>{{item}}</view>
+                        <view class="gird all" bindtap="showallbrand">查看全部</view>
+                    </view>
+                </view>
+            </scroll-view>
+         </view>
+        <view class="btn">
+            <view class="btn1" bindtap="quxiao">取消</view>
+            <view class="btn2" bindtap="reset">重置</view>
+            <view class="btn3" bindtap="okH">确定</view>
+        </view>
+    </view>
+    <allbrand bind:okbrand='ok' bind:close='close' wx:if="{{nowshow=='allbrand'}}"></allbrand>
+</view>

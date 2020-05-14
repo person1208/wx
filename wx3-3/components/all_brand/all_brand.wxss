@@ -1,0 +1,19 @@
+/* components/all_brand/all_brand.wxss */
+.bottom_btn{
+    height: 50px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    /* width: 100%; */
+    text-align:center;
+    line-height:50px;
+}
+.bottom_btn .btn1{
+    height: 50px;
+    flex:1;
+}
+.bottom_btn .btn2{
+    height: 50px;
+    flex:1;
+    background-color:red;
+    color:#fff;
+}

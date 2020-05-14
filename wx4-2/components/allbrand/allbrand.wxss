@@ -1,0 +1,26 @@
+.btn{
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    display: flex;
+    color:#fff;
+    font-size:13px;
+}
+.btn >view{
+    flex:1;
+}
+.btn .btn1{
+    background-color: rgb(30, 255, 0);
+}
+.btn .btn2{
+    background-color: rgb(112, 149, 218);
+}
+.btn .btn3{
+    background-color: rgb(128, 0, 28);
+}
+.i-index-demo-item{
+    height: 30px;
+}
+.i-index-demo-item.cur{
+    color: red;
+}

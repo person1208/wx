@@ -1,0 +1,16 @@
+.box{
+  width:200px;
+  height:200px;
+  margin:10px auto;
+}  
+.row{
+  display: flex;
+}
+.tiao{
+  flex:5;
+}
+.kuang{
+  flex:1;
+  border:1px solid #333;
+}
+  

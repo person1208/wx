@@ -1,0 +1,2 @@
+<!--pages/xq/xq.wxml-->
+<text>{{name}}的详情页</text>

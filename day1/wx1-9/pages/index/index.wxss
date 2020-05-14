@@ -1,0 +1,54 @@
+Page{
+    background-color: rgb(214, 213, 213);
+}
+.header{
+    height:100px;
+    background-color: #07c160;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color:#fff;
+    font-size:20px;
+}
+.body{
+    flex:1;
+}
+.total{
+    flex:1;
+}
+.txt{
+    font-size: 24px;  
+}
+.content{
+    padding:0 5px;
+    font-size:16px;
+    background-color: #fff;
+}
+.item{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgb(206, 202, 202);
+    
+}
+.item text{
+    flex:2;
+}
+.item input{
+    flex:5;
+    height:30px;
+    margin-top:5px;
+}
+.item text.danwei{
+    flex: 1;
+    color:rgb(146, 145, 145)
+}
+picker.kong{
+   position: absolute;
+   right:10px
+}
+image{
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}

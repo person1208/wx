@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<text>HELLO</text>
+<van-button type="danger">按钮</van-button>
+
+<van-button  bind:click="onDisplay">日历</van-button>
+<van-calendar show="{{ show }}" bind:close="onClose"  />
+
+<van-rate value="{{ value }}" bind:change="onChange" />

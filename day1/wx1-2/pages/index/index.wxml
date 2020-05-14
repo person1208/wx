@@ -1,0 +1,16 @@
+<view class="box" style="background:rgb({{r}},{{g}},{{b}})"></view>
+
+<view class='row'>
+  <slider min="0" max="255" class="tiao" value="{{r}}" bindchanging="changeR" bindchange="changeR"></slider>
+  <input class="kuang" value="{{r}}" bindinput="changeR"></input>
+</view>
+
+<view class='row'>
+  <slider min="0" max="255" class="tiao" value="{{g}}" bindchanging="changeG"></slider>
+  <input class="kuang" value="{{g}}" bindinput="changeG"></input>
+</view>
+
+<view class='row'>
+  <slider min="0" max="255" class="tiao" value="{{b}}" bindchanging="changeB"></slider>
+  <input class="kuang" value="{{b}}" bindinput="changeB"></input>
+</view>

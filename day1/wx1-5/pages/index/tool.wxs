@@ -1,0 +1,11 @@
+function mianji(r){
+    
+    return (r*r*3.14).toFixed(2);
+}
+function zhouchang(r){
+    return (r*2*3.14).toFixed(2);
+}
+module.exports={
+    mianji:mianji,
+    zhouchang:zhouchang
+}

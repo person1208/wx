@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="sidebar" style="height:{{windowHeight}}px">
+        <view class="lm {{nowType==item?'cur':''}}" wx:for='{{products_keys}}'  wx:key='index' bindtap="jump" data-i='{{index}}' data-n='{{item}}'>
+            {{item}}
+        </view>
+    </view>
+    <view class="main" style="height:{{windowHeight}}px">
+        <scroll-view scroll-y="true" style="height:{{windowHeight}}px" scroll-into-view='t{{nowid}}' scroll-with-animation='true' bindscroll='scrollH'>
+            <!-- 定义template -->
+            <template name="pro">
+               <view class="pro" id="t{{index}}">
+                     <view class="biaoti">{{biaoti}}</view>
+                     <view>
+                           <view wx:for='{{pro_item}}' wx:key='index' class="box">
+                                <view class="picbox">
+                                    <image src="http://www.aiqianduan.com:8922/productpics/{{item.pic}}"></image>
+                                </view>
+                                <view class="wordbox">
+                                     {{item.name}}
+                                </view>
+                           </view>
+                     </view>
+               </view>
+            </template>
+
+            <!-- 使用template -->
+            <template wx:for='{{products_keys}}' wx:key='index' is='pro' data="{{biaoti:item,pro_item:products[item],index:index}}" />
+        </scroll-view>
+    </view>
+</view>

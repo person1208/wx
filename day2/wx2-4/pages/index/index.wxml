@@ -1,0 +1,5 @@
+<view>
+    <my-test mystr='你好呀' info='{{m}}' bindmyEv='addOne'></my-test>
+    <my-test mystr='爱你哟' info='{{m}}' bindmyEv='addOne'></my-test>
+    <my-test mystr='么么哒' info='{{m}}' bindmyEv='addOne'></my-test>
+</view>

@@ -1,0 +1,78 @@
+<view>
+  <view class="header">
+    <view class="body">
+      身体体重指数
+      <view class="txt">0</view>
+    </view>
+    <view class="total">
+      体侧成绩
+      <view class="txt">0</view>
+    </view>
+  </view>
+  <view class="content">
+      <view class="item">
+          性别
+           <picker class="kong"  bindchange="change"  value="{{index}}" range="{{arr}}">
+              <view class="picker">
+                {{arr[index]}}<image src="./arrow.png"></image>
+              </view>
+           </picker>
+      </view>
+       <view class="item">
+          年级
+          <picker class="kong"  bindchange="changenianji"  value="{{nianjiindex}}" range="{{nianji}}">
+              <view class="picker">
+                {{nianji[nianjiindex]}}<image src="./arrow.png"></image>
+              </view>
+           </picker>
+      </view>
+       <view class="item">
+          <text>体重</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">千克</text>
+      </view>
+      <view class="item">
+          <text>身高</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">厘米</text>
+      </view>
+      <view class="item">
+          <text>肺活量</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">毫升</text>
+      </view>
+      <view class="item">
+          <text>左立前驱</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">厘米</text>
+      </view>
+      <view class="item">
+          <text>立定跳远</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">米</text>
+      </view>
+      <view class="item">
+          <text>50米跑</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">秒</text>
+      </view>
+      <view class="item">
+          <text>1000米跑</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">秒</text>
+      </view>
+      <view class="item">
+          <text>引体向上</text>          
+          <input placeholder="如：50">
+          </input>
+          <text class="danwei">个</text>
+      </view>
+  </view>
+</view>

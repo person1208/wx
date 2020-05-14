@@ -1,0 +1,15 @@
+
+.ball{
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+     background:#999;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+    margin:10px 10px 0px 0;
+}
+.ball.cur{
+    background-color: rgb(170, 9, 9);
+}

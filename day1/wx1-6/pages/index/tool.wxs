@@ -1,0 +1,6 @@
+function isred(a,n){
+    return a.indexOf(n)!=-1
+}
+module.exports={
+    isred:isred
+}

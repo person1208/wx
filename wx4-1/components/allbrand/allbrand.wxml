@@ -1,0 +1,37 @@
+<!--components/allbrand/allbrand.wxml-->
+<view>
+    <!-- <scroll-view scroll-y='true' style="height:{{wH-51}}px"> -->
+        <view class="i-index-demo" style="height:{{wH-51}}px">
+            <i-index height='100%' item-height='{{40}}'>
+                <i-index-item 
+                    wx:for="{{ all_car }}" 
+                    wx:for-index="index" 
+                    wx:key="index" 
+                    wx:for-item="item" name="{{item.k}}">
+                    <view 
+                        wx:for="{{item.list}}" 
+                        wx:for-index="in" 
+                        wx:key="in" 
+                        class="i-index-demo-item {{nowchoose==it?'cur':''}}"
+                        wx:for-item="it"
+                        bindtap="bindcell" data-n='{{it}}'>
+                        {{it}}
+                    </view>
+                </i-index-item>
+            </i-index>
+        </view>
+        <!-- <van-index-bar  index-list="{{i}}">
+            <view wx:for='{{i}}' wx:key='index' wx:for-item='k'>
+                <van-index-anchor index="{{k}}"  />
+                <van-cell title-class="{{nowchoose==pinpai?'cur':''}}" wx:for='{{all_car[k]}}' wx:key='index' title="{{pinpai}}" wx:for-item='pinpai' bind:click="bindcell" data-n='{{pinpai}}' />                
+            </view>
+
+        </van-index-bar> -->
+    <!-- </scroll-view> -->
+   
+
+    <view class="bottom_btn">
+        <view class="btn1" bindtap="brandqu">取消</view>
+        <view class="btn2" bindtap="okH">确定</view>
+    </view>
+</view> 

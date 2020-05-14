@@ -1,0 +1,35 @@
+<template name="temp">
+    <view class="box">
+        <view class="pic">
+            <image src="http://aiqianduan.com:56506/images/carimages_small/{{item.id}}/view/{{item.img}}"></image>
+        </view>
+        <view class="word">
+            <view>【id】{{item.id}}</view>
+            <view>【品牌】{{item.brand}}</view>
+            <view>【价格】{{item.price}}</view>
+            <view>【颜色】{{item.color}}</view>
+            <view>【排放】{{item.exhaust}}</view>
+            <view>【燃油】{{item.fuel}}</view>
+            <view>【动力】{{item.engine}}</view>
+        </view>
+    </view>       
+</template>
+
+<view>
+    <view class="sx">
+        <i-button class="btn" bind:click="shanxuan" type="primary" size="small">删选</i-button>
+        <i-drawer mode="right" visible="{{isShowDrawer}}" bind:close="onClose">
+            <view class="container" style="height:{{wH}}px">
+                <drawer bind:ok='ok' wx:if="{{isShowDrawer}}" bind:close='close' brand='{{brand}}' color="{{color}}" filters='{{filters}}'></drawer>
+            </view>
+        </i-drawer>
+    </view>
+    <view>
+        <scroll-view scroll-y='true' style="height:{{wH-51}}px" bindscrolltolower="bindscrolltolower" lower-threshold='120'>
+            <template is="temp" wx:for='{{res}}' wx:key='id' data="{{item}}"></template>
+            <view>
+                没有更多数据了
+            </view>
+        </scroll-view>       
+    </view>
+</view>

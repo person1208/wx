@@ -1,0 +1,8 @@
+<view>
+    这是test组件
+    <view>{{a}}</view>
+    <view>{{b}}</view>
+    <view>{{c}}</view>
+    <view>{{mystr}}</view>
+    <button bindtap="add">a+1</button>
+</view>

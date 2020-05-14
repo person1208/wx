@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "i-checkbox-group": "../../iview-weapp-dist/checkbox-group/index",
+        "i-checkbox": "../../iview-weapp-dist/checkbox/index"
+    }
+}

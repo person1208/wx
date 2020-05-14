@@ -1,0 +1,39 @@
+<view>
+    <view wx:if="{{nowshow=='main'}}">
+        <view class="contianer">
+            <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+                <view>
+                    <view class="title">
+                        <view class="pinpai">品牌</view>
+                        <view class="now">当前：{{nowchoose}}</view>
+                    </view>
+                    <view class="content">
+                        <view class="gird {{item==nowchoose?'cur':''}}" wx:for='{{arr}}' wx:key='index' bindtap="pinpaiH" data-brand='{{item}}'>{{item}}</view>
+                        <view class="gird all" bindtap="showallbrand">查看全部</view>
+                    </view>
+                </view>
+
+                <view wx:for="{{filters}}" wx:key='index'>
+                    <view class="title">
+                        <view class="pinpai">{{item.c}}</view>
+                        <view class="now">当前：{{now[item.e]}}</view>
+                    </view>
+                    <view class="content">
+                        <wxs src='./tool.wxs' module='tool' />
+                        <view class="gird {{tool.indexarr(now[item.e],it)?'cur':''}}" wx:for='{{item.options.length>5?tool.slicearr(item.options,0,5):item.options}}' wx:for-item='it' 
+                        wx:key-index='in' wx:key='in' bindtap="gaoliang" data-k="{{item.e}}" data-v='{{it}}'>{{it}}</view>
+                        <view class="gird all" wx:if='{{item.options.length>5}}' bindtap="all" data-c='{{item.c}}' data-e='{{item.e}}' data-options='{{item.options}}' >查看全部</view>
+                    </view>
+                </view>
+
+            </scroll-view>
+         </view>
+        <view class="btn">
+            <view class="btn1" bindtap="quxiao">取消</view>
+            <view class="btn2" bindtap="reset">重置</view>
+            <view class="btn3" bindtap="okH">确定</view>
+        </view>
+    </view>
+    <allbrand bind:okbrand='ok' bind:close='close' wx:if="{{nowshow=='allbrand'}}"></allbrand>
+    <showall bind:showallok='showallok' bind:showallquxiao='showallquxiao' now="{{now}}" nowe="{{nowe}}" nowc='{{nowc}}' nowoptions='{{nowoptions}}' wx:if="{{nowshow=='showall'}}"></showall>
+</view>

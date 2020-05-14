@@ -1,0 +1,18 @@
+<!--components/allbrand/allbrand.wxml-->
+<view>
+    <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+        <van-index-bar  index-list="{{i}}">
+            <view wx:for='{{i}}' wx:key='index' wx:for-item='k'>
+                <van-index-anchor index="{{k}}"  />
+                <van-cell title-class="{{nowchoose==pinpai?'cur':''}}" wx:for='{{all_car[k]}}' wx:key='index' title="{{pinpai}}" wx:for-item='pinpai' bind:click="bindcell" data-n='{{pinpai}}' />                
+            </view>
+
+        </van-index-bar>
+    </scroll-view>
+   
+
+    <view class="bottom_btn">
+        <view class="btn1">取消</view>
+        <view class="btn2" bindtap="okH">确定</view>
+    </view>
+</view> 

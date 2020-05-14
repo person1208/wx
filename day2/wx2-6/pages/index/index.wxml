@@ -1,0 +1,16 @@
+<view class='container'>
+    <template name="mytemp">
+        <view class="box">
+            <view>【学号】：{{id}}</view>
+            <view>【姓名】：{{name}}</view>
+            <view>【年龄】：{{age}}</view>
+            <!-- <view>【爱好】：{{hob}}</view> -->
+            <view>
+                【爱好】：<text wx:for="{{hob}}" wx:key='index'> {{item}} </text>            
+
+            </view>
+        </view>
+    </template>
+
+    <template is="mytemp" wx:for='{{arr}}' wx:key='id' data="{{id:item.id,name:item.name,age:item.age,hob:item.hobby}}" />
+</view>

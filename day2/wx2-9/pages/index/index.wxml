@@ -1,0 +1,25 @@
+<view class='container'>
+    <button bindtap="jump" data-n='aa'>aa</button>
+    <button bindtap="jump" data-n='bb'>bb</button>
+    <button bindtap="jump" data-n='cc'>cc</button>
+    <scroll-view scroll-y='true' style="height:400px" scroll-into-view='{{to}}' scroll-with-animation='{{true}}'>
+        <view id="aa">
+            <view>aa</view>
+            <view><image src="/images/ym1.jpg"></image></view>
+            <view><image src="/images/ym1.jpg"></image></view>
+            <view><image src="/images/ym1.jpg"></image></view>
+        </view>
+         <view id="bb">
+         <view>bb</view>
+            <view><image src="/images/ym2.jpg"></image></view>
+            <view><image src="/images/ym2.jpg"></image></view>
+            <view><image src="/images/ym2.jpg"></image></view>
+        </view>
+         <view id="cc">
+         <view>cc</view>
+            <view><image src="/images/ym3.jpg"></image></view>
+            <view><image src="/images/ym3.jpg"></image></view>
+            <view><image src="/images/ym3.jpg"></image></view>
+        </view>
+    </scroll-view>
+</view>

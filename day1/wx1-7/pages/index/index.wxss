@@ -1,0 +1,34 @@
+.redbox{
+    overflow: hidden;
+}
+.bluebox{
+    overflow: hidden;
+}
+.redball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #999;
+    text-align:center;
+    line-height: 30px;
+    float: left;
+    margin:10px 5px 0 5px;
+    color:#fff;
+}
+.redball.cur{
+    background-color: rgb(151, 0, 0);
+}
+.blueball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #999;
+    text-align:center;
+    line-height: 30px;
+    float: left;
+    margin:10px 5px 0 5px;
+    color:#fff;
+}
+.blueball.cur{
+    background-color: rgb(10, 0, 151);
+}

@@ -1,0 +1,46 @@
+<!--components/drawer/drawer.wxml-->
+<view>
+   <view wx:if="{{nowshow=='main'}}" style="height:{{wH}}px">
+         <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+        <view class="sx_grid">
+            <view class="title">
+                <view style="float:left;">品牌</view>
+                <view  style="float:right;">当前：{{brand}}</view>
+            </view>
+            
+            <view class="content">
+                <view wx:for='{{arr}}' wx:key='index' class="btn {{item==brand?'cur':''}}" bindtap="pin" data-p='{{item}}'>{{item}}</view>
+                <view class="btn all" bindtap="showall">全部</view>
+            </view>
+        </view>
+
+        <view class="sx_grid" wx:for='{{filters}}' wx:key='index' wx:for-item='item' wx:for-index='index'>
+            <view class="title">
+                <view style="float:left;">{{item.c}}(可多选)</view>
+                <view  style="float:right;">当前：{{now[item.e]}}</view>
+            </view>
+            
+            <view class="content">
+            <wxs src='./tool.wxs' module='tool' />
+                <view wx:for='{{item.options.length>5?tool.slicearr(item.options,0,5):item.options}}'
+                       wx:for-item='it' wx:for-index='in' 
+                       wx:key='in' class="btn {{tool.checkarr(now[item.e],it)?'cur':''}}" 
+                       bindtap="pinM" data-p='{{it}}'
+                       data-k='{{item.e}}' data-v='{{it}}'
+                       >
+                       {{it}}
+                </view>
+                <view class="btn all" bindtap="showoptions" data-k='{{item.e}}' data-c='{{item.c}}' data-options='{{item.options}}' wx:if='{{item.options.length>5}}'>全部</view>
+            </view>
+        </view>
+
+        </scroll-view>
+        <view class="bottom_btn">
+            <view class="btn0" bindtap="close">x</view>
+            <view class="btn1" bindtap="reset">重置</view>
+            <view class="btn2" bindtap="drawerok">确定</view>
+        </view>
+   </view>
+   <my-allbrand bindok='okHan' wx:if="{{nowshow=='allbrand'}}" bind:brandclose='closebrand'></my-allbrand>
+   <showall  wx:if="{{nowshow=='showall'}}" nowc='{{nowc}}' nowe='{{nowe}}' nowoptions='{{nowoptions}}' bind:ok='ok'></showall>
+</view>

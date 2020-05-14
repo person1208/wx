@@ -1,0 +1,13 @@
+
+<view class="redbox">
+<wxs src='./tool.wxs' module='tool'></wxs>
+    <view  
+    bindtap="redball" 
+    class="ball {{tool.isred(arr,index+1)?'cur':''}}"
+    wx:for='{{33}}' 
+    wx:key='index'
+    data-n='{{index+1}}'>
+        {{index+1}}
+    </view>
+    <button bindtap="sj">随机</button>
+</view>
