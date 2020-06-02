@@ -1,0 +1,33 @@
+.topbox{
+    height:40px;
+    border-bottom: 1px solid #ccc;
+}
+.list_item{
+    width: 96%;
+    padding:10px;
+    display: flex;
+}
+.pic{
+    width: 160px;
+    height:120px;
+}
+.pic image{
+    width: 160px;
+    height:120px;
+}
+.word{
+    flex:1;
+    padding-left:10px;
+    font-size: 14px;
+}
+.btn{
+    border:1px solid #ccc;
+    padding:5px;
+    font-size:12px;
+    float: right;
+    margin:5px;
+}
+.drawer-container{
+    background-color: #fff;
+    width:290px;
+}

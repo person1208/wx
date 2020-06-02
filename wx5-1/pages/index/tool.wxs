@@ -1,0 +1,11 @@
+function getarr(arr,eq){
+    for(var i=0;i<arr.length;i++){
+        if(arr[i].e==eq){
+            return arr[i]
+        }
+    }
+  
+}
+module.exports={
+    getarr:getarr
+}

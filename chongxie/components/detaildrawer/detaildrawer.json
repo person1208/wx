@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "detail-drawer-allbrand":"/components/allbrand/allbrand",
+        "detail-drawer-showall":"/components/showall/showall"
+    }
+}

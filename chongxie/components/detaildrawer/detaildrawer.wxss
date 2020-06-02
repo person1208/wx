@@ -1,0 +1,60 @@
+/* components/detaildrawer/detaildrawer.wxss */
+.bottom_box{
+    height: 50px;
+    border-top:1px solid #ccc;
+    display: flex;
+    text-align: center;
+    line-height: 50px;
+}
+.bottom_box .btn0{
+    flex:1;
+    background-color: red;
+}
+.bottom_box .btn1{
+    flex:1;
+    background-color: green;
+}
+.bottom_box .btn2{
+    flex:1;
+    background-color: blue;
+}
+.sx_grid{
+   overflow: hidden;
+   margin-bottom:10px;
+}
+.sx_grid .title{
+    font-size: 16px;
+    line-height: 32px;
+    height:32px;
+    padding-left:5px;
+    font-weight:bold;
+    border-bottom:1px solid #ccc ;
+}
+.sx_grid .content{
+    padding-left:5px;
+    
+}
+.sx_grid .btn{
+    float: left;
+    width: 33.33%;
+    height:25px;
+    font-size:12px;
+    box-sizing: border-box;
+    line-height: 25px;
+    text-align: center;
+    background-color: #999;
+    border-right:5px solid #fff;
+    margin:5px 0;
+    color:#fff;
+    
+}
+.sx_grid .btn.cur{
+    background-color: yellow;
+    color:#000;
+}
+.sx_grid .btn.all{
+    background-color: #fff;
+    border:1px solid #999;
+    width:31%;
+    color:#000;
+}

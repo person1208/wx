@@ -1,0 +1,17 @@
+<view>
+    <scroll-view scroll-y='true' style="height:{{wH-51}}px">
+        <view>{{nowc}}的全部</view>
+        <view>
+            <i-checkbox-group current="{{current}}" bindchange="handleFruitChange">
+                <i-checkbox wx:for="{{nowoptions}}" position="left" wx:key="index" value="{{item}}">
+                </i-checkbox>
+            </i-checkbox-group>
+        </view>
+    </scroll-view>
+
+    <view class="btn">
+        <view class="btn1" bindtap="quxiao">取消</view>
+        <view class="btn2" bindtap="reset">重置</view>
+        <view class="btn3" bindtap="okH">确定</view>
+    </view>
+</view>

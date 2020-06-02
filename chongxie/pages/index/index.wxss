@@ -1,0 +1,47 @@
+.container{
+  display: flex;
+}
+.container .sidebar{
+  
+  width:80px;
+  background-color: #eee;
+}
+.container .maincontent{
+  flex:1;
+}
+.pro_list{
+  display: flex;
+  padding:10px;
+}
+.pro_list .pic{
+  width: 100px;
+  height: 100px;
+}
+.pro_list .pic image{
+  width: 100px;
+  height: 100px;
+}
+.pro_list .word{
+  flex:1;
+  margin-left:10px;
+  font-size: 14px;
+}
+.biaoti{
+  font-size:16px;
+  font-weight: bold;
+  text-align:center;
+  height:22px;
+  line-height: 22px;
+  color: red;
+
+}
+.itemL{
+  font-size:14px;
+  height:40px;
+  line-height:40px;
+  text-align: center;
+}
+.itemL.cur{
+  color:red;
+  font-weight: bold;  
+}

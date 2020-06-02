@@ -1,0 +1,13 @@
+<import src="./item-list.wxml" />
+<view class="container"> 
+  <view class="sidebar" style="height:{{wH}}px">
+    <view class="itemL {{item==now?'cur':''}}" bindtap="itemLH" data-n="{{item}}" data-i="{{index}}" wx:for="{{products_keys}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="maincontent" style="height:{{wH}}px">
+     <scroll-view scroll-y='true' style="height:{{wH}}px" scroll-into-view="{{nowid}}" scroll-with-animation='true' bindscroll="scrollR">
+        <view wx:for="{{products_keys}}" wx:key="index" class="item_list" id="t{{index}}">
+          <template is="list" data="{{index:item,item:products[item]}}"></template>
+        </view>
+     </scroll-view>
+  </view>
+</view>

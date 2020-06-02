@@ -1,0 +1,34 @@
+<!--components/detaildrawer/detaildrawer.wxml-->
+<wxs src="./tool.wxs" module="tool"  />
+<view style="height:{{wH}}px" wx:if="{{nowshow=='detaildrawer'}}">
+    <scroll-view scroll-y="true" style="height:{{wH-51}}px">
+       <view class="sx_grid">
+            <view class="title">
+                <text style="float:left;">品牌</text>
+                <text style="float:right;">当前：{{brand}}</text>
+            </view>            
+            <view class="content" wx:for="{{pinpaiarr}}" wx:key="index">
+                <view bindtap="detaildrawerbrand" data-brand="{{item}}" class="btn {{item==brand?'cur':''}}" >{{item}}</view>                
+            </view>
+            <view class="btn all" bindtap="all">查看全部</view>
+       </view>
+       <view class="sx_grid" wx:for="{{filters}}" wx:key="index">
+            <view class="title">
+                <text style="float:left;">{{item.c}}(可多选)</text>
+                <text style="float:right;">当前：{{now[item.e].length>2?tool.slicearr(now[item.e],0,2)+'等'+now[item.e].length+'项':now[item.e]}}</text>
+            </view>            
+            <view class="content" wx:for-item="it" wx:key="in" wx:for="{{item.options.length>5?tool.slicearr(item.options,0,5):item.options}}" wx:key="in">
+                <view bindtap="detaildrawerbrandH" data-leimu="{{it}}" data-k="{{item.e}}" class="btn {{tool.checkarr(now[item.e],it)?'cur':''}}" >{{it}}</view>                
+            </view>
+            <view class="btn all" bindtap="allleimu" data-le="{{item.e}}" data-lc="{{item.c}}" data-options='{{item.options}}'  wx:if="{{item.options.length>5}}">查看全部</view>
+       </view>
+    </scroll-view>
+     <view class="bottom_box">
+            <view class="btn0" bindtap="detailclose">取消</view>
+            <view class="btn1" bindtap="detaildrawerreset">重置</view>
+            <view class="btn2" bindtap="detailok">确认</view>
+    </view>
+</view>
+<detail-drawer-allbrand bind:detaildrawerok="detaildrawerok" brand='{{brand}}' bind:detaildrawerclose='detaildrawerclose' wx:if="{{nowshow=='allbrand'}}"></detail-drawer-allbrand>
+<detail-drawer-showall bind:showallclose="showallclose" bind:showallok="showallok" wx:if="{{nowshow=='showall'}}" 
+nowc="{{nowc}}" nowe="{{nowe}}" nowoptions="{{nowoptions}}" nowcurrent="{{now[nowe]}}"></detail-drawer-showall>

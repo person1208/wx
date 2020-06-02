@@ -1,0 +1,53 @@
+<template name="temp">
+    <view class="box">
+        <view class="pic">
+            <image src="http://aiqianduan.com:56506/images/carimages_small/{{item.id}}/view/{{item.img}}"></image>
+        </view>
+        <view class="word">
+            <view>【id】{{item.id}}</view>
+            <view>【品牌】{{item.brand}}</view>
+            <view>【价格】{{item.price}}</view>
+            <view>【颜色】{{item.color}}</view>
+            <view>【排放】{{item.exhaust}}</view>
+            <view>【燃油】{{item.fuel}}</view>
+            <view>【动力】{{item.engine}}</view>
+        </view>
+    </view>       
+</template>
+
+<view>
+    <view class="sx">
+        <view class="row">
+            <view class="btn" bindtap="shanxuan">筛选</view>
+        </view>
+        <view class="row">
+            <scroll-view scroll-x='true' style="height:30px">
+                <view class="topnav">
+                    <view class="topvan-item {{nowmenu==item.e?'cur':''}}" wx:for='{{filters}}' wx:key='index' 
+                    bindtap="menutab" data-e='{{item.e}}'>{{item.c}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <wxs src='./tool.wxs' module='tool' />
+        <view class="menu" wx:if="{{nowmenu!=''}}" >
+             <view class="mask"  catchtap="close_menu" catchtap="closemenu"></view>
+            <view class="menu_inner">
+                <menu-inner nowmenu='{{nowmenu}}' nowarr='{{tool.getarr(filters,nowmenu)}}' nowa='{{nowall[nowmenu]}}' ></menu-inner>
+            </view>
+        </view>
+        <i-drawer mode="right" visible="{{isShowDrawer}}" bind:close="onClose">
+            <view class="container" style="height:{{wH}}px">
+                <drawer bind:ok='ok' wx:if="{{isShowDrawer}}" bind:close='close' brand='{{nowall.brand}}' color="{{nowall.color}}" exhaust="{{nowall.exhaust}}" fuel="{{nowall.fuel}}"
+                 engine='{{nowall.engine}}' filters='{{filters}}'></drawer>
+            </view>
+        </i-drawer>
+    </view>
+    <view>
+        <scroll-view scroll-y='true' style="height:{{wH-61}}px" bindscrolltolower="bindscrolltolower" lower-threshold='120'>
+            <template is="temp" wx:for='{{res}}' wx:key='id' data="{{item}}"></template>
+            <view>
+                没有更多数据了
+            </view>
+        </scroll-view>       
+    </view>
+</view>

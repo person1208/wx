@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-button": "../../iview-weapp-dist/button/index",
+    "i-drawer": "../../iview-weapp-dist/drawer/index",
+    "drawer":"/components/drawer/drawer",
+    "menu-inner":"/components/menu-inner/menu-inner"
+  }
+}

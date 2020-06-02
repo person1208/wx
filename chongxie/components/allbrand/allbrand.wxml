@@ -1,0 +1,26 @@
+<!--components/allbrand/allbrand.wxml-->
+<view style="height:{{wH}}px">
+    <view style="height:{{wH-51}}px">
+        <i-index height="100%">
+            <i-index-item 
+                wx:for="{{ allbsarr }}" 
+                wx:for-index="index" 
+                wx:key="index" 
+                wx:for-item="item" name="{{item.key}}">
+                <view 
+                    class="i-index-demo-item {{it==nowbrand?'cur':''}}" 
+                    wx:for="{{item.list}}" 
+                    wx:for-index="in" 
+                    wx:key="in" 
+                    wx:for-item="it"
+                    bindtap="brandcell" data-brand="{{it}}">
+                    {{it}}
+                </view>
+            </i-index-item>
+        </i-index>
+    </view>
+    <view class="bottom_box">
+        <view class="btn0" bindtap="detaildrawerclose">取消</view>
+        <view class="btn2" bindtap="detaildrawerok">确认</view>
+    </view>
+</view>

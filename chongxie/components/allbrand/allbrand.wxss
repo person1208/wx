@@ -1,0 +1,29 @@
+/* components/allbrand/allbrand.wxss */
+.bottom_box{
+    height: 50px;
+    border-top:1px solid #ccc;
+    display: flex;
+    text-align: center;
+    line-height: 50px;
+}
+.bottom_box .btn0{
+    flex:1;
+    background-color: red;
+}
+.bottom_box .btn1{
+    flex:1;
+    background-color: green;
+}
+.bottom_box .btn2{
+    flex:1;
+    background-color: blue;
+}
+.i-index-demo-item{
+    height: 34px;
+    line-height: 34px;
+    padding-left: 20px;   
+}
+.i-index-demo-item.cur{
+    color: red;
+    font-weight: bold;
+}

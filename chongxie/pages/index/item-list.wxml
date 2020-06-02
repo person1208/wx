@@ -1,0 +1,14 @@
+<template name="list">
+    <view class="biaoti">
+        {{index}}
+    </view>
+    <view class="pro">
+        <view class="pro_list" wx:for="{{item}}" wx:for-item="itemarr" wx:key="index">
+            <view class="pic">
+                 <image src="http://www.aiqianduan.com:56506/images/productpics/{{itemarr.pic}}"></image>
+            </view>
+            <view class="word"> {{itemarr.name}}</view>
+           
+        </view>
+    </view>
+</template>

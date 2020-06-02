@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index",
+    "detail-drawer":"/components/detaildrawer/detaildrawer" 
+  }
+}

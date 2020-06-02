@@ -1,0 +1,25 @@
+<view>  
+    <view class="container" style="height:{{wH-51}}px">
+        <i-index height="100%">
+            <i-index-item 
+                wx:for="{{ allcar }}" 
+                wx:for-index="index" 
+                wx:key="index" 
+                wx:for-item="item" name="{{item.key}}">
+                <view 
+                    class="i-index-demo-item {{it==nowcur?'cur':''}}" 
+                    wx:for="{{item.list}}" 
+                    wx:for-index="in" 
+                    wx:key="in" 
+                    wx:for-item="it"
+                    bindtap="allbrandH" data-i='{{it}}'>
+                    {{it}}
+                </view>
+            </i-index-item>
+         </i-index>
+    </view>
+     <view class="btn">
+            <view class="btn1" bindtap="quxiaoallbrand">取消</view>
+            <view class="btn3" bindtap="okallbrand">确定</view>
+    </view>
+</view>

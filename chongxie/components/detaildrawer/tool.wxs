@@ -1,0 +1,10 @@
+function slicearr(arr,a,b){
+    return arr.slice(a,b);
+}
+function checkarr(arr,item){
+    return arr.indexOf(item)!=-1
+}
+module.exports={
+    slicearr:slicearr,
+    checkarr:checkarr
+}
